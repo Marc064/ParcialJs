@@ -84,21 +84,25 @@ const agregar= ()=>{
   const estado = document.getElementById('estado').value
   const fecha = document.getElementById('fecha').value
 console.log(validarFecha(fecha));
-  if (validarFecha(fecha)) {
-    const nuevoId = 'task' + (Object.keys(data.tasks).length + 1)
-
-    const nuevaTarea = {
-      task: tarea,
-      state: estado == 0 ? false:true,
-      end: cambiarFormatoFecha(fecha)
+  if (tarea != "") {
+    if (validarFecha(fecha)) {
+      const nuevoId = 'task' + (Object.keys(data.tasks).length + 1)
+  
+      const nuevaTarea = {
+        task: tarea,
+        state: estado == 0 ? false:true,
+        end: cambiarFormatoFecha(fecha)
+      }
+  
+      data.tasks[nuevoId] = nuevaTarea
+  
+      actualizar()
+  
+    } else {
+      alert('No se puede ingrear una fecha inferior a la actual')
     }
-
-    data.tasks[nuevoId] = nuevaTarea
-
-    actualizar()
-
   } else {
-    alert('No se puede ingrear una fecha inferior a la actual')
+    alert('Se debe llenar todos los campos')
   }
 
 }
