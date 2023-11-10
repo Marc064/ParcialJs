@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parcial Marco Vargas</title>
 </head>
+
 <body>
-    
+    <H1>Ingresar nuevas tareas</H1>
+    Tarea
+    <input type="text" id="tarea">
+    Estado
+    <select id="estado">
+        <option value="0">Pendiente</option>
+        <option value="1">Realizada</option>
+        <input type="date" name="Fecha" id="fecha">
+    </select>
+    <button  onclick="agregar()" id="btnAgregar">Agregar</button>
+    </br>
+    <h1>Tareas</h1>
+    </br>
+    Fitros
+    <select id="filtro">
+        <option value="0">Todos</option>
+        <option value="1">Actividades cumplidas</option>
+        <option value="2">Actividades no cumplidas vigentes</option>
+        <option value="3">Actividades cumplidas no vigentes</option>
+    </select>
+    <button id="btnFitro">Buscar</button>
+    <table border="1" id="Tabla">
+        <thead id="Encabezado">
+            <tr>
+                <td>Tarea</td>
+                <td>Estado</td>
+                <td>Fecha</td>
+                <td>Vencida</td>
+                <td>Cambiar Estado</td>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+    </table>
+
+    <script src="data.js"></script>
 </body>
+
 </html>
