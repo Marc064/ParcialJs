@@ -138,6 +138,7 @@ function validarFecha(fechaIngresada) {
 
 
 const filtrar = ()=>{
-  const filtro = document.getElementById('btnFitro').value
+  const filtro = document.getElementById('filtro').value
   console.log(filtro);
+  
 }
