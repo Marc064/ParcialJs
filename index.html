@@ -5,31 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parcial Marco Vargas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
     <H1>Ingresar nuevas tareas</H1>
-    Tarea
-    <input type="text" id="tarea"  >
-    Estado
-    <select id="estado">
-        <option value="0">Pendiente</option>
-        <option value="1">Realizada</option>
-        <input type="date" name="Fecha" id="fecha">
-    </select>
-    <button  onclick="agregar()" id="btnAgregar">Agregar</button>
+    <div class="col-md-3">
+        Tarea
+        <input class="form-control" type="text" id="tarea">
+        Estado
+        <select class="form-control" id="estado">
+            <option value="0">Pendiente</option>
+            <option value="1">Realizada</option>
+        </select>
+        Fecha
+        <input class="form-control" type="date" name="Fecha" id="fecha">
+        <button  class="btn btn-primary" onclick="agregar()" id="btnAgregar">Agregar</button>
+    </div>
     </br>
     <h1>Tareas</h1>
     </br>
+   <div class="col-md-3">
     Fitros
-    <select id="filtro">
+    <select class="form-select" id="filtro">
         <option value="0">Todos</option>
         <option value="1">Actividades cumplidas</option>
         <option value="2">Actividades no cumplidas vigentes</option>
         <option value="3">Actividades cumplidas no vigentes</option>
     </select>
-    <button onclick="filtrar()" id="btnFitro">Buscar</button>
-    <table border="1" id="Tabla">
+    <button class="btn btn-primary" onclick="filtrar()" id="btnFitro">Buscar</button>
+   </div>
+    <table class="table table-bordered" id="Tabla">
         <thead id="Encabezado">
             <tr>
                 <td>Tarea</td>
@@ -43,7 +50,9 @@
 
         </tbody>
     </table>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <script src="data.js"></script>
 </body>
 
