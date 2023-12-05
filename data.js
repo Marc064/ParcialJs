@@ -50,7 +50,7 @@ function actualizar() {
     return fechaA - fechaB;
   });
 
-  const filtro = tareaIdsOrdenadas.filter((a)=>{
+  const filtro = tareaIdsOrdenadas.filter(a => {
     switch (state) {
       case "1":
         return data.tasks[a].state === true 
@@ -159,7 +159,7 @@ function validarFecha(fechaIngresada) {
   fechaActual.setHours(0, 0, 0, 0)
   fechaIngresadaObj.setHours(0, 0, 0, 0)
 
-  return fechaIngresadaObj >= fechaActual
+  return fechaIngresadaObj > fechaActual
 }
 
 
